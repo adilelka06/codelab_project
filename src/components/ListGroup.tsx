@@ -22,9 +22,8 @@ function ListGroup({ items, heading, onSelectItem }: Props) {
 			<li 
 			className={selectedIndex === index ? "list-group-item active" : "list-group-item"} 
 			key={item} 
-			// onMouseOver={() => setSelectedIndex(index)}
+			onMouseOver={() => setSelectedIndex(index)}
 			onClick={() => {
-				setSelectedIndex(index);
 				onSelectItem(item);
 			}}
 			>{item}</li>
